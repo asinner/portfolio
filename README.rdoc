@@ -1,4 +1,4 @@
 == README
 The following app contains my personal portfolio website. Navigation to the root url to find about more about me and my portfolio
 
-![homepage](https://www.dropbox.com/s/0zavsgyfhksimjm/Screenshot%202014-09-16%2021.01.24.png?dl=0)
+![homepage](https://www.dropbox.com/s/bmbj044e8tuawkp/home-page.png?dl=0)
