@@ -1,6 +1,6 @@
-require "test_helper"
+require 'test_helper'
 
-describe "My welcome page", :capybara do
+describe 'My welcome page', :capybara do
   it "exists" do
     visit root_path
     assert(page.status_code, 200)
