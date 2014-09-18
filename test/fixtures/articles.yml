@@ -1,4 +1,7 @@
 one:
     title: 'Hello, World'
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non neque et diam condimentum imperdiet. Curabitur ut tempus leo, luctus convallis orci. Pellentesque at ex at nulla lobortis porta id in velit. Vivamus id iaculis tellus, nec pretium augue. Cras ut gravida orci, eget consectetur odio. Vestibulum condimentum ultrices odio. Sed a nibh dui. Integer venenatis quis orci quis luctus. Cras efficitur condimentum lectus. Pellentesque et lectus bibendum, tristique metus eget, sollicitudin sapien. In malesuada enim vitae sodales lobortis. Sed pretium vitae massa ac aliquam. Curabitur convallis id enim id malesuada. Phasellus pharetra accumsan lacinia. Vivamus posuere magna sed sem eleifend, eget tristique leo molestie.'
-    
+
+new:
+    title: 'Sample article'
+    body: 'Blah Blah Blah...'
