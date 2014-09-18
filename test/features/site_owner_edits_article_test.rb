@@ -8,5 +8,6 @@ feature 'Site owner edits article' do
     fill_in :body, with: 'Updated crap...'
     click_on 'Update Article'
     page.text.must_include 'Article updated'
+    page.text.must_include 'Updated crap...'
   end
 end
