@@ -1,9 +1,9 @@
 require 'test_helper'
 
 feature 'Site owner destroys an article' do
-  scenario 'they see article destroyed message' do
-    visit article_path(articles(:one))
-    click_on 'Delete'
-    page.text.must_include 'Article destroyed'
+  scenario 'they see article removed message' do
+    visit articles_path
+    click_on 'Destroy'
+    page.text.must_include('Article removed')
   end
 end
