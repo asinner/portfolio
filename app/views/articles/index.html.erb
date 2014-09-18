@@ -1,6 +1,10 @@
 <% @articles.each do |article| %>
-	<div class='post'>
+	<div class='article'>
 		<h1 class='title'><%= article.title %></h1>
-		<p><%= article.body %></p>
+		<p class='body'><%= article.body %></p>
 	</div>
+	
+	<%= link_to 'Destroy', article_path(article), method: :delete %>
+	<%= link_to 'Edit', edit_article_path(article) %>
+	
 <% end %>
