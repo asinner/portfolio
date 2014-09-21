@@ -1,3 +1,26 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.article {
+	margin-bottom: 25px;
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
+.article .title,
+.article .body {
+	font-family: 'PT Serif', Georgia, Arial, serif;
+}
+.article .title {
+	font-size: 3.0em;
+}
+.article .body {
+	font-size: 1.6em;
+	line-height: 2.0em;
+}
+.article a {
+	color: #229C7D;
+}
+.article a:hover {
+	color: #229C7D;
+	background: none;
+	text-decoration: underline;
+}

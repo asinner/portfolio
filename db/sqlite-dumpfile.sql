@@ -1,0 +1,10 @@
+BEGIN TRANSACTION;
+CREATE TABLE "schema_migrations" ("version" text NOT NULL);
+INSERT INTO "schema_migrations" VALUES('20140918021515');
+INSERT INTO "schema_migrations" VALUES('20140918023920');
+INSERT INTO "schema_migrations" VALUES('20140918023947');
+CREATE TABLE "articles" ("id" SERIAL PRIMARY KEY NOT NULL, "created_at" timestamp, "updated_at" timestamp, "title" text, "body" text);
+INSERT INTO "articles" VALUES(736314438,'2014-09-20 02:13:52','2014-09-20 02:13:52','Sample article','Blah Blah Blah...');
+INSERT INTO "articles" VALUES(980190962,'2014-09-20 02:13:52','2014-09-20 02:13:52','Hello, World','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non neque et diam condimentum imperdiet. Curabitur ut tempus leo, luctus convallis orci. Pellentesque at ex at nulla lobortis porta id in velit. Vivamus id iaculis tellus, nec pretium augue. Cras ut gravida orci, eget consectetur odio. Vestibulum condimentum ultrices odio. Sed a nibh dui. Integer venenatis quis orci quis luctus. Cras efficitur condimentum lectus. Pellentesque et lectus bibendum, tristique metus eget, sollicitudin sapien. In malesuada enim vitae sodales lobortis. Sed pretium vitae massa ac aliquam. Curabitur convallis id enim id malesuada. Phasellus pharetra accumsan lacinia. Vivamus posuere magna sed sem eleifend, eget tristique leo molestie.');
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");
+COMMIT;
