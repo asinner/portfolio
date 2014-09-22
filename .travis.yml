@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-    - 2.1.2p95
+- 2.1.2p95
+deploy:
+  provider: heroku
+  api_key:
+    secure: T2sAIf4EzHMMz208nrgV5ZzLgEFEQJuSw82bl7G+LJJRCdp/RVwFVjFMTjVcOH8jcOLeh7Ci5p/pGEMdswIP9yhgJGZsYHW7pZSgizdegWksvpRQ2YVY9553z1/K+DVwpcwGwSvuKbl3JlQzjrNGFiqmL2NxpuNtEL9R0EssYXA=
+  app: andrew-sinner-portfolio
+  on:
+    repo: asinner/portfolio

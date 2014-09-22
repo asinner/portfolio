@@ -10,6 +10,7 @@ gem 'minitest-rails'
 gem 'pg'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
+gem 'travis'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
