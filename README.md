@@ -1,3 +1,4 @@
+![Passing](https://travis-ci.org/asinner/portfolio.svg?branch=master)
 # README
 The following app contains my personal portfolio website. Navigation to the root url to find about more about me and my portfolio
 ## Website
