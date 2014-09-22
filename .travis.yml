@@ -8,3 +8,5 @@ deploy:
   app: andrew-sinner-portfolio
   on:
     repo: asinner/portfolio
+before_script:
+    - psql -c 'create database portfolio_test' -U postgres
