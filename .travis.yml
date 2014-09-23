@@ -4,7 +4,7 @@ rvm:
 deploy:
     provider: heroku
     api_key:
-        secure: U8x7REPqCthgaTwQ3cI3K8yscKsZuuc9wCdTeXwpoP05KZ/Ss60EBZoW07o/yGpsdt2f1PSbpoY+tdDaG6UcTmDIKz3i/QQf7mQohAQKKE1Md1Ux5QX+CyIzHfvjK8GmhYF9W+Ny72cAC3xas4JkfIEm2zNDYnVWgP5w0EJz0Yw=
+        secure: "U8x7REPqCthgaTwQ3cI3K8yscKsZuuc9wCdTeXwpoP05KZ/Ss60EBZoW07o/yGpsdt2f1PSbpoY+tdDaG6UcTmDIKz3i/QQf7mQohAQKKE1Md1Ux5QX+CyIzHfvjK8GmhYF9W+Ny72cAC3xas4JkfIEm2zNDYnVWgP5w0EJz0Yw="
         app: andrew-sinner-portfolio
     on:
         repo: asinner/portfolio
