@@ -1,0 +1,23 @@
+<%= form_for @project do |f| %>
+
+	<div>
+		<% @project.errors.full_messages.each do |msg| %>
+			<%= msg %>
+		<% end %>		
+	</div>
+	
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :category %>
+	<%= f.text_field :category %>
+	
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	
+	<%= f.label :url %>
+	<%= f.text_field :url %>
+	
+	<%= f.submit %>
+	
+<% end %>
