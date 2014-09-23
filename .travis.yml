@@ -5,6 +5,8 @@ deploy:
     provider: heroku
     api_key:
         secure: Y+vCQDiqsKBH81I2nfTwUhVj0/86b/3xb/XLuTAG5XzeBojuAy1cPpFdyUujys1fXbXCg7x9gNR+4Kyl9VDxeYNfz3YCIfSVPjUwvO8n82WmQoAADFGeyrHU4YK1wudnDhLQ+orlix2rR+fChbnd+a3VikU/KVQ8VrAtuVaW+78=
+    app:
+        - andrew-sinner-portfolio
     on:
         repo: asinner/portfolio
     run:
