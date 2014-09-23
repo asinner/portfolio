@@ -1,6 +1,6 @@
 ![Passing](https://travis-ci.org/asinner/portfolio.svg?branch=master)
 # README
-The following app contains my personal portfolio website. Navigation to the root url to find about more about me and my portfolio
+The following application contains the personal website for myself. It currently has two resources: Articles and Projects. Articles refer to blog posts that can be created and edited within the application. Projects refer to work I've down that belong to my portfolio.
 ## Website
 You can find this portfolio at:
 http://www.andrewsinner.com
