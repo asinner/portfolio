@@ -3,7 +3,6 @@ require 'test_helper'
 feature 'Site owner edits a project' do
   scenario 'with a valid object they see an update message' do
     visit edit_project_path(projects(:one))
-    save_and_open_page
     fill_in 'Title', with: 'A Different Title'
     click_on 'Update Project'
     page.status_code.must_equal 200

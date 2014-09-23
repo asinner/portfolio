@@ -1,12 +1,23 @@
-<div id='about-me'>
-	<div class='row text-center name-row'>
-		<div class='small-12'>
-			<h1><%= link_to 'Andrew Sinner', root_path, class: 'name' %></h1>
-		</div>
-	</div>
-	<div class='row description-row'>
-		<div class='small-12'>
-			<p class='description'>I'm a Ruby on Rails developer that loves to take business ideas and turn them into web applications. Take a look at some products I've built as well as articles I've written</p>
-		</div>
-	</div>
+<div class='large-12' id='about-me'>
+	<h1 class='name'>Andrew Sinner</h1>
+	<h2 class='title'><small>Ruby on Rails Developer</small></h2>
+	<ul class='contact-links no-bullet'>
+		<li class='github'>
+			<%= link_to 'https://github.com/asinner' do %>
+				<i class='icon'></i>
+				github.com/asinner
+			<% end %>
+		</li>
+		<li class='twitter'>
+			<%= link_to 'https://twitter.com/andrewsinner' do %>
+				<i class='icon'></i>
+				@asinner
+			<% end %>
+		</li>
+	</ul>
+	<ul class='navigation no-bullet'>
+		<li><%= link_to 'Home', root_path %></li>
+		<li><%= link_to 'Portfolio', projects_path %></li>
+		<li><%= link_to 'Articles', articles_path %></li>
+	</ul>
 </div>
