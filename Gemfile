@@ -13,12 +13,14 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'travis'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'ffi', '<1.9.3'
 
 group :production do
   gem 'rails_12factor'
 end
 
 group :development do
+  gem 'launchy'
   gem 'spring'
 end
 
