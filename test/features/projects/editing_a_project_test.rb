@@ -9,7 +9,7 @@ feature 'Site owner edits a project' do
     page.text.must_include 'Project updated'
     page.text.must_include 'A Different Title'
   end
-  
+
   scenario 'with an invalid object they see error messages' do
     visit edit_project_path(projects(:one))
     fill_in 'Title', with: ''
