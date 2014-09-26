@@ -2,10 +2,25 @@
 	<h1 class='title'>
 		<%= link_to article.title, article_path(article, class: 'link') %>
 	</h1>
-	<p id='author'><%= article.author.email %></p>
-	<p class='body'><%= article.body %></p>
-	<div class='tools'>
-		<%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article), method: :delete %>
-	</div>
+	
+	<p id='author'>
+		<%= article.author.email %>
+	</p>
+	
+	<p class='body'>
+		<%= article.body %>
+	</p>
+	
+	<p class='status'>
+		Status: <%= article.published? ? 'Published' : 'Unpublished' %>
+	</p>
+	
+	<% if policy(Article).edit? %>
+		<%= link_to 'Edit', edit_article_path(article) %>
+	<% end %>
+	
+	<% if policy(Article).destroy? %>
+		<%= link_to 'Delete', article_path(article), method: :delete %>
+	<% end %>
 	
 </div>

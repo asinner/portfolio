@@ -5,9 +5,19 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+author:
+    email: author@example.com
+    encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
+    role: author
+
+editor:
+    email: editor@example.com
+    encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
+    role: editor
+
 andrew:
-    email: 'andrew@example.com'
+    email: andrew@example.com
     encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
 mark:
-    email: 'mark@example.com'
+    email: mark@example.com
     encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
