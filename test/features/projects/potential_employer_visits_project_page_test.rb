@@ -6,4 +6,3 @@ feature 'Potential employer visits project page' do
     page.text.must_include 'eCommerce'
   end
 end
-
