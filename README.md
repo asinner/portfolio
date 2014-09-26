@@ -1,4 +1,6 @@
-![Passing](https://travis-ci.org/asinner/portfolio.svg?branch=master)
+Codeship ![Codeship Status for asinner/portfolio](https://www.codeship.io/projects/a4c6ee70-2754-0132-a789-7eb8486ac016/status)](https://www.codeship.io/projects/37713)
+Travis CI ![Passing](https://travis-ci.org/asinner/portfolio.svg?branch=master)
+
 # README
 The following application contains my personal site. It currently has two resources: Articles and Projects. Articles refer to blog posts that can be created and edited within the application. Projects refer to work I've down that belong to my portfolio.
 
