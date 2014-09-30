@@ -7,7 +7,11 @@
 
 	<div class='row'>
 		<div class='column small-12 large-8 large-centered'>
-			<%= render 'articles/front_page_article', article: @article %>
+			<% if @article %>
+				<%= render 'articles/front_page_article', article: @article %>
+			<% else %>
+				<p class='text-center'>No articles yet</p>
+			<% end %>
 		</div>
 	</div>	
 </div>
@@ -19,7 +23,12 @@
 		</div>
 	</div>
 	
-	<%= render 'projects/project', project: @project %>
+	<% if @project %>
+		<%= render 'projects/project', project: @project %>
+	<% else %>
+		<p class='text-center'>No projects yet</p>
+	<% end %>
+		  
 	
 </div>
 
