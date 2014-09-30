@@ -1,16 +1,8 @@
-<h2>Portfolio</h2>
-
-<div id='projects'>
+<div class='projects'>
 	<% @projects.each do |project| %>
-		<div class='project' id='<%= dom_id(project) %>'>
-			<p><%= project.title %></p>
-			<p><%= project.category %></p>
-			<p><%= project.description %></p>
-			<p><%= project.url %></p>
-			<%= link_to 'Show', project_path(project) %>
-			<%= link_to 'Edit', edit_project_path(project) %>
-			<%= link_to 'Delete', project_path(project), method: :delete %>
-		</div>
+		
+		<%= render 'projects/project', project: project %>
+		
 	<% end %>
 </div>
 

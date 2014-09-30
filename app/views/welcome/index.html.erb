@@ -1,2 +1,25 @@
-<h1>Hi, my name is Andrew Sinner and I'm a Ruby on Rails developer</h1>
-<h2>I'm passionate about turning business ideas into web applications.</h2>
+<div class='articles'>
+	<div class='row'>
+		<div class='column small-12 large-8 large-centered text-center'>
+			<h4><small><em>~ MY LATEST ARTICLE ~</em></small></h3>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='column small-12 large-8 large-centered'>
+			<%= render 'articles/front_page_article', article: @article %>
+		</div>
+	</div>	
+</div>
+
+<div class='projects'>
+	<div class='row'>
+		<div class='column small-12 large-8 large-centered text-center'>
+			<h4 class='section-header'><small><em>~ MY LATEST PROJECT ~</em></small></h3>
+		</div>
+	</div>
+	
+	<%= render 'projects/project', project: @project %>
+	
+</div>
+

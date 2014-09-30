@@ -7,7 +7,7 @@ feature("
 ") do
   scenario 'sign up' do
     visit root_path
-    click_link 'Sign up'
+    click_link 'Sign up'    
     fill_in 'Email', with: 'andrew2@example.com'
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '12345678'

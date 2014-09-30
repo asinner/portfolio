@@ -1,0 +1,26 @@
+@import 'foundation';
+
+#about-me {
+	margin-top: 70px;
+	margin-bottom: 25px;
+//	-webkit-font-smoothing: antialiased;
+}
+#about-me .headshot {
+	width: 100px;
+	height: auto;
+	@include radius(1000px);
+	margin-bottom: 10px;
+	padding: 10px;
+	background: rgb(250, 250, 250);
+}
+#about-me h1 a {
+	font-size: 24px;
+	color: #444;
+}
+#about-me h2 {
+	font-size: 17px;
+	line-height: 1.7em;
+}
+#about-me {
+	font-weight: 400;
+}

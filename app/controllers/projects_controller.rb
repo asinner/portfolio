@@ -28,7 +28,8 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       redirect_to @project, notice: 'Project updated'
     else
-      render :edit, notice: 'Project did not update'
+      flash.now[:notice] = 'Project did not update'
+      render :edit
     end
   end
 
@@ -40,7 +41,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :category, :description, :url)
+    params.require(:project).permit(:title, :category, :description, :url, :image_url)
   end
 
   def set_project

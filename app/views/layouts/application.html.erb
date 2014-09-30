@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+	  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Andrew Sinner | Ruby on Rails Developer</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag    "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
 
 		<%= render 'shared/flash' %>
-		
-		<%= render 'users/sessions_and_registration' %>
-		
-		<div class='row' id='main'>
-			<div class='large-3 columns'>
-				<%= render 'shared/about' %>
+				
+		<div id='about-me'>
+			<div class='row text-center'>
+				<%= image_tag('alps-headshot-square.jpg', class: 'headshot center') %>
 			</div>
-			<div class='large-9 columns'>
-				<%= yield %>
+			<div class='row text-center'>
+				<div class='small-12 column'>
+					<h1><%= link_to 'Andrew Sinner', root_path %></h1>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='small-12 large-8 small-centered column text-center'>
+					<h2>Hi, I’m Andrew and I’m a Ruby on Rails developer in Seattle, Washington. I spend my time <%= link_to 'building', projects_path %> web apps and <%= link_to 'writing', articles_path %> on business and software development. Find out more <%= link_to 'about me ›' %></h2>
+				</div>
 			</div>
 		</div>
+		
+		<div id='main-navigation'>
+			<p>
+				<%= link_to 'Portfolio', projects_path %> | 
+				<%= link_to 'Blog', articles_path %> | 
+				<%= link_to 'About me' %> | 
+				<%= link_to 'Contact' %>
+			</p>
+		</div>
+						
+		<%= yield %>
+		
+		<div id='footer'>
+			<div class='row text-center'>
+				<div class='column small-12'>
+					<% if current_user %>
+						<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+					<% else %>
+					  <%= link_to 'Sign in', new_user_session_path %> • <%= link_to 'Sign up', new_user_registration_path %>
+					<% end %>
+				</div>
+			</div>
+			<div class='row social text-center'>
+				<div class='column large-12'>
+					© Copyright Andrew Sinner <%= Date.today.year %> • Handcrafted in Seattle with Rails
+				</div>
+			</div>
+		</div>		
 		
     <%= javascript_include_tag "application" %>
   </body>
