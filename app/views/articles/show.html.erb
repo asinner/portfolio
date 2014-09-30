@@ -5,3 +5,19 @@
 		</div>
 	</div>
 </div>
+
+
+<div class='comments'>
+	<% policy_scope(@article.comments).each do |comment| %>
+		<%= render 'comments/comment', comment: comment unless comment.new_record? %>
+	<% end %>
+</div>
+
+<% if policy(Comment).create? %>
+	<div class='row'>
+		<h5 class='text-center'>Leave a comment</h5>
+		<div class='column small-12 large-6 large-centered'>	
+			<%= render 'comments/form' %>
+		</div>
+	</div>
+<% end %>

@@ -1,4 +1,4 @@
-class ArticlePolicy < ApplicationPolicy    
+class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     attr_reader :user, :scope
 

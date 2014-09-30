@@ -4,6 +4,15 @@
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/comment.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/project.rb": [
@@ -54,6 +63,19 @@
         0,
         0,
         0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         0,
         0,
         null,
@@ -257,6 +279,52 @@
         null,
         null
       ],
+      "/Users/andrewsinner/Developer/codefellows/portfolio/test/features/comments/as_a_site_visitor_i_want_to_write_a_comment_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/andrewsinner/Developer/codefellows/portfolio/test/features/comments/as_an_author_or_editor_i_want_to_approve_comments_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/andrewsinner/Developer/codefellows/portfolio/test/features/has_welcome_page_test.rb": [
         1,
         null,
@@ -357,19 +425,19 @@
         1,
         null,
         1,
-        1,
-        null,
-        0,
         null,
         null,
-        1,
-        0,
-        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1412040142
+    "timestamp": 1412105966
   },
   "Cucumber Features": {
     "coverage": {
@@ -747,6 +815,15 @@
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/comment.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/project.rb": [
@@ -755,6 +832,6 @@
         null
       ]
     },
-    "timestamp": 1412034048
+    "timestamp": 1412100276
   }
 }

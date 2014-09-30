@@ -19,3 +19,22 @@ The latest addition to the portfolio app has included the devise gem which adds 
 ## Apprach - Pundit
 The first task was to write out tests for CRUD actions for each role: author, editor, visitor.
 The Pundit gem was added to the application for authorization. I then created a policy with the Pundit generator. I then added a list of actions within the policy that mapped one-to-one with respective controller actions. The diferrent pundit actions checked the current user (if there is one) for its role which was added to the database as an attribute on the field. After creating the policy actions, I added authorize methods in each of the controller actions to ensure the current user has permissions to do whatever controller action was executing. Another step involved adding a method in the policy to permit certain attributes based on the users permissions. After this I defined the resolve method in the Scope class within the Policy class. This step added a policy_scope method that allowed records to be gathered according to whatever the conditions were in the method. 
+
+## Approach - Comments / OmniAuth
+The first task for this exercise involved adding a comments as a child resource to articles. Writing the specs for this was fairly straightforward as it simply looked like this
+```ruby
+visit article_path(articles(:one))
+fill_in 'Author', with: 'Some Author'
+fill_in 'Content', with: 'Example comment text...'
+click_on 'Leave comment'
+page.text.must_include 'Comment created'
+```
+This led to:
+1. creating a new form for comment.
+2. generating the comment resource
+3. nesting the comments resource under articles in routes
+4. building out the controller
+5. adding some validations
+6. only showing approved comments in `articles/show.html.erb`
+7. writing the scope resolve policy method
+After this, I followed closely to the BDD spec for implementing OmniAuth. The high-level steps involved installing the omniauth-twitter gem, creating a Twitter app, configuring Devise to use Omniauth, adding Twitter credentials, slightly tweaking the views, and add logic to the OmniauthCallbacks controller to handle the response, and then signing in the user based on response.

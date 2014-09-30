@@ -1,0 +1,15 @@
+one:
+    author: Troll
+    author_email: tr@ll.com
+    author_url: www.example.com
+    content: Never gonna give you up
+    article: one
+    approved: false
+    
+two:
+    author: John Doe
+    author_email: john@example.com
+    author_url: www.johndoe.com
+    content: This is a test comment
+    article: one
+    approved: true
