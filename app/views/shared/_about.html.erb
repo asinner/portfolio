@@ -1,23 +1,7 @@
-<div class='large-12' id='about-me'>
-	<h1 class='name'>Andrew Sinner</h1>
-	<h2 class='title'><small>Ruby on Rails Developer</small></h2>
-	<ul class='contact-links no-bullet'>
-		<li class='github'>
-			<%= link_to 'https://github.com/asinner' do %>
-				<i class='icon'></i>
-				github.com/asinner
-			<% end %>
-		</li>
-		<li class='twitter'>
-			<%= link_to 'https://twitter.com/andrewsinner' do %>
-				<i class='icon'></i>
-				@asinner
-			<% end %>
-		</li>
-	</ul>
-	<ul class='navigation no-bullet'>
-		<li><%= link_to 'Home', root_path %></li>
-		<li><%= link_to 'Portfolio', projects_path %></li>
-		<li><%= link_to 'Articles', articles_path %></li>
-	</ul>
-</div>
+<header>
+	<div id='about-me'>
+		<%= image_tag('headshot.jpg') %>
+		<h1><%= link_to 'Andrew Sinner', root_url, class: 'title' %></h1>
+		<h2 class='description'>Hi, I’m Andrew and I’m a Ruby on Rails developer based in Seattle, WA. I spend my time <%= link_to 'building', projects_path %> web apps and <%= link_to 'writing', articles_path %> on business and software development. Find out more <%= link_to 'about me ›' %></h2>		
+	</div>
+</header>
