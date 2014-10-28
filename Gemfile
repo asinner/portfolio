@@ -7,6 +7,7 @@ gem 'coveralls', require: false
 gem 'ckeditor'
 gem 'devise'
 gem 'figaro'
+gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'minitest-rails'
