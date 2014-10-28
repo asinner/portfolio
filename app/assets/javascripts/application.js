@@ -13,11 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require ckeditor/init
-
-
-$(function() {
-	console.log('hello');
-	var car = function(param) {
-		
-	}
-});

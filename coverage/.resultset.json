@@ -3,8 +3,31 @@
     "coverage": {
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/article.rb": [
         1,
+        null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/comment.rb": [
@@ -437,7 +460,7 @@
         null
       ]
     },
-    "timestamp": 1414530268
+    "timestamp": 1414539358
   },
   "Cucumber Features": {
     "coverage": {
@@ -814,8 +837,31 @@
     "coverage": {
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/article.rb": [
         1,
+        null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/andrewsinner/Developer/codefellows/portfolio/app/models/comment.rb": [
@@ -832,6 +878,6 @@
         null
       ]
     },
-    "timestamp": 1412100276
+    "timestamp": 1414539386
   }
 }

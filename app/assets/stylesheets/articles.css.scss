@@ -35,4 +35,33 @@
 		background: $light-yellow;
 		border: 1px solid darken($light-yellow, 15);
 	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.4em;
+	}
+	h3 {
+		font-size: rem(24);
+	}
+	ul,
+	ol {
+		margin-bottom: 1em;
+	}
+	ol {
+		list-style-type: decimal;
+		padding-left: 50px;
+	}
+	code {
+		background: $light-gray;
+		@include pad(3px);
+		margin: 0 5px;
+		border: 1px solid darken($light-gray, 10);
+		font-weight: bold;
+	}
+	pre {
+		margin-bottom: 2em;
+	}
 }
