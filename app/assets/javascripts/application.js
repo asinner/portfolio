@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require ckeditor/init
+
+
+$(function() {
+	console.log('hello');
+	var car = function(param) {
+		
+	}
+});

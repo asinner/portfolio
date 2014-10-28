@@ -1,28 +1,11 @@
-<div class='article' id='<%= article.id %>'>
+<article class='article' id="<%= dom_id(article) %>">
 	<h1 class='title'>
-		<%= link_to article.title, article_path(article, class: 'link') %>
+		<%= link_to article.title, article_path(article) %>
 	</h1>
 	
-	<p class='author'>
-		<em>
-			Published by <%= article.author.email %> on <%= article.created_at.strftime("%B %d, %Y") %>
-		</em>
-	</p>
+	<div class='body'>
+		<%= raw article.body %>		
+	</div>
 	
-	<p class='body'>
-		<%= truncate(article.body, length: 140) %>
-	</p>
-	
-	<p class='status'>
-		Status: <%= article.published? ? 'Published' : 'Unpublished' %>
-	</p>
-	
-	<% if policy(Article).edit? %>
-		<%= link_to 'Edit', edit_article_path(article) %>
-	<% end %>
-	
-	<% if policy(Article).destroy? %>
-		<%= link_to 'Delete', article_path(article), method: :delete %>
-	<% end %>
-	
-</div>
+	<%= render 'articles/actions' %>
+</article>

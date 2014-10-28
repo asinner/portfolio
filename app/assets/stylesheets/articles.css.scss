@@ -1,0 +1,38 @@
+.article {
+	.title {
+		margin-bottom: 0.6em;
+		a {
+			color: $dark-blue;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+	.body {
+		font-size: rem(18);
+		color: darken($light-blue, 20);
+	}
+	.tip,
+	.note,
+	.warning {
+		font-size: rem(15);
+		@include pad(15px);
+		border-radius: 4px;
+		margin-bottom: 1em;
+		p {
+			margin: 0;
+		}
+	}
+	.warning {
+		background: $red;
+		color: #FFF;
+	}
+	.note {
+		background: lighten($dark-blue, 50);
+	}
+	.tip {
+		color: darken($light-yellow, 70);
+		background: $light-yellow;
+		border: 1px solid darken($light-yellow, 15);
+	}
+}

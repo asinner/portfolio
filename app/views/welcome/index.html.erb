@@ -1,34 +1,3 @@
-<div class='articles'>
-	<div class='row'>
-		<div class='column small-12 large-8 large-centered text-center'>
-			<h4><small><em>~ MY LATEST ARTICLE ~</em></small></h3>
-		</div>
-	</div>
-
-	<div class='row'>
-		<div class='column small-12 large-8 large-centered'>
-			<% if @article %>
-				<%= render 'articles/front_page_article', article: @article %>
-			<% else %>
-				<p class='text-center'>No articles yet</p>
-			<% end %>
-		</div>
-	</div>	
-</div>
-
-<div class='projects'>
-	<div class='row'>
-		<div class='column small-12 large-8 large-centered text-center'>
-			<h4 class='section-header'><small><em>~ MY LATEST PROJECT ~</em></small></h3>
-		</div>
-	</div>
-	
-	<% if @project %>
-		<%= render 'projects/project', project: @project %>
-	<% else %>
-		<p class='text-center'>No projects yet</p>
-	<% end %>
-		  
-	
-</div>
-
+<% if @article %>
+	<%= render 'articles/article', article: @article %>
+<% end %>

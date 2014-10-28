@@ -1,12 +1,12 @@
 header {
 	background: darken($dark-blue, 5);
-	padding: 50px 0;
+	padding: 100px 0 50px;
 }
 #about-me {
 	text-align: center;
 	a {
 		font-weight: 500;
-		color: $red;
+		color: $green;
 	}
 	.title {
 		display: block;
