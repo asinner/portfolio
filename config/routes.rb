@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
-
+  
+  devise_for :users
   root 'welcome#index'
-
   resources :articles do
     resources :comments
   end
+  
+  namespace :admin do
+    resources :articles
+    resources :projects
+  end
+  
   resources :projects
 
   # Example of regular route:

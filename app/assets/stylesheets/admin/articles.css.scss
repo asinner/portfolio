@@ -1,0 +1,73 @@
+#admin {
+	min-height: 100%;
+	background: rgb(245, 245, 245);
+	.articles,
+	.projects {
+		margin-top: 15px;
+		background: #FFF;
+		border: 1px solid rgb(200, 200, 200);
+		li {
+			@include pad(10px 15px);
+			font-weight: 500;
+		}
+		.label {
+			@include linear-gradient(rgb(250, 250, 250), rgb(240, 240, 240));
+			@include pad(0 5px);
+			border-bottom: 1px solid rgb(200, 200, 200);
+			font-size: rem(14);
+			line-height: 25px;
+			height: 25px;
+			font-weight: 500;
+		}
+		.action {
+			color: $blue;
+			font-size: rem(14);
+			margin-left: 10px;
+		}
+		.title {
+			font-size: rem(14);
+		}
+		.status {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 1000px;
+			position: relative;
+			&.published {
+				background: $green;
+			}
+			&.draft {
+				background: rgb(230, 230, 230);
+			}
+		}
+		.updated_at {
+			display: inline-block;
+			font-size: rem(13);
+			color: rgb(150, 150, 150);
+			font-weight: 500;
+			@include pad(0 15px);
+			
+		}
+	}
+}
+#admin {
+	.article-form-page {
+		padding-top: 25px;
+		.actions {
+			.field {
+				position: relative;
+				float: right;
+				top: 5px;
+				padding-right: 25px;
+			}
+			label {
+				display: inline-block;
+			}
+			@include clearfix;
+			margin-bottom: 1em;
+		}
+		input[type='submit'] {
+			float: right;
+		}
+	}	
+}

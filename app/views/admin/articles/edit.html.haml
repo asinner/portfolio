@@ -1,0 +1,4 @@
+#edit-article-page.article-form-page
+	= render 'admin/articles/form'
+	.actions
+		= link_to 'Delete this article', admin_article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }

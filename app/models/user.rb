@@ -1,17 +1,22 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   has_many :articles, foreign_key: 'author_id'
 
-  def author?
-    role == 'author'
+  #def author?
+  #  role == 'author'
+  #end
+  #
+  #def editor?
+  #  role == 'editor'
+  #end
+  
+  def admin?
+    role == 'admin'
   end
-
-  def editor?
-    role == 'editor'
-  end
+  
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

@@ -29,6 +29,10 @@
 	}
 	.note {
 		background: lighten($dark-blue, 50);
+		a {
+			color: darken($green, 10);
+			font-weight: 500;
+		}
 	}
 	.tip {
 		color: darken($light-yellow, 70);
@@ -52,6 +56,10 @@
 	}
 	ol {
 		list-style-type: decimal;
+		padding-left: 50px;
+	}
+	ul {
+		list-style-type: disc;
 		padding-left: 50px;
 	}
 	code {

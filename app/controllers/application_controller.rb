@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def user_not_authorized
-    flash[:error] = 'You need to sign in or sign up before continuing'
-    redirect_to(request.referrer || root_path)
+    render file: 'public/403', status: 403 unless current_user
+  end
+  
+  def authenticate_admin!
+    user_not_authorized
   end
 end

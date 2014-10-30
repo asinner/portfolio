@@ -7,6 +7,9 @@ class Article < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
   
+  scope :published, -> { where published: true }
+  scope :drafts,   -> { where published: false }
+  
   # Hooks
   before_validation :set_slug, if: :new_record?
   
@@ -23,5 +26,6 @@ class Article < ActiveRecord::Base
   def set_slug
     self.slug = self.title.parameterize
   end
+  
   
 end

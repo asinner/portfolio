@@ -26,14 +26,12 @@ CKEDITOR.editorConfig = function( config ) {
 
 	config.toolbarGroups = [
 			{ name: 'pbckcode' },
-	    { name: 'document',    groups: [ 'mode', 'document', 'doctools' ] },
-	    { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-	    { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-	    { name: 'forms' },
-	    '/',
+	    { name: 'mode',    groups: [ 'mode'	 ] },
+	    { name: 'spellchecker', groups: [ 'spellchecker' ] },
 	    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-	    { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 	    { name: 'links' },
+    	'/',
+	    { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 	    { name: 'insert' },
 	    '/',
 	    { name: 'styles' },
@@ -43,8 +41,11 @@ CKEDITOR.editorConfig = function( config ) {
 	    { name: 'about' }
 	];
 	
+	config.height = '300px';
+	
   // PBCKCODE CUSTOMIZATION
   config.pbckcode = {
+	
       // An optional class to your pre tag.
       cls : '',
   
@@ -57,10 +58,11 @@ CKEDITOR.editorConfig = function( config ) {
       modes :  [ ['HTML', 'html'], ['CSS', 'css'], ['PHP', 'php'], ['JS', 'javascript'], ['Ruby', 'ruby'], ['SCSS', 'scss'], ['YAML', 'yaml'], ['JSON', 'json'], ['Shell', 'sh'] ],
   
       // The theme of the ACE Editor of the plugin.
-      theme : 'textmate',
+      theme : 'ambiance',
   
       // Tab indentation (in spaces)
-      tab_size : '4'
+      tab_size : '2',
+
   };
 
 };

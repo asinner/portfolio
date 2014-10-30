@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @article = Article.last
+    @article = Article.published.last
   end
 end
