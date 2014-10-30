@@ -3,7 +3,7 @@ require 'test_helper'
 feature 'admin can create a project' do
   scenario 'create' do
     sign_in
-    visit new_admin_project_path 
+    visit new_admin_project_path
     fill_in 'Title', with: 'Invoice.re'
     fill_in 'Category', with: 'Web applicatino'
     fill_in 'Description', with: 'This portfolio site blah blah blah'
@@ -11,8 +11,8 @@ feature 'admin can create a project' do
     click_on 'Create Project'
     page.text.must_include 'Invoice.re'
   end
-  
-  #scenario 'they see a success message with a valid project' do
+
+  # scenario 'they see a success message with a valid project' do
   #  visit projects_path
   #  click_on 'New Project'
   #  fill_in 'Title', with: 'Portfolio'
@@ -22,9 +22,9 @@ feature 'admin can create a project' do
   #  click_on 'Create Project'
   #  page.status_code.must_equal 200
   #  page.text.must_include 'Project was successfully created'
-  #end
+  # end
   #
-  #scenario 'they see an error message with an invalid project ' do
+  # scenario 'they see an error message with an invalid project ' do
   #  visit new_project_path
   #  click_on 'Create Project'
   #  current_path.must_match(/projects$/)
@@ -33,5 +33,5 @@ feature 'admin can create a project' do
   #  page.text.must_include "Category can't be blank"
   #  page.text.must_include "Description can't be blank"
   #  page.text.must_include "Url can't be blank"
-  #end
+  # end
 end

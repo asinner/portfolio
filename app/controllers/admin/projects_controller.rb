@@ -7,7 +7,7 @@ class Admin::ProjectsController < ApplicationController
     @project = Project.new
     @url = admin_projects_path
   end
-  
+
   def create
     @project = Project.new(project_params)
     if @project.save
@@ -16,16 +16,16 @@ class Admin::ProjectsController < ApplicationController
       render :new
     end
   end
-  
+
   def index
     @projects = Project.all
   end
-  
+
   def edit
     @project = Project.find(params[:id])
     @url = admin_project_path(@project)
   end
-  
+
   def update
     @project = Project.find(params[:id])
     if @project.update(project_params)
@@ -34,13 +34,14 @@ class Admin::ProjectsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
     redirect_to admin_projects_path
   end
-private
+
+  private
 
   def project_params
     params.require(:project).permit(:title, :category, :description, :url, :image_url)

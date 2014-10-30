@@ -1,7 +1,4 @@
 Codeship ![Codeship Status for asinner/portfolio](https://www.codeship.io/projects/a4c6ee70-2754-0132-a789-7eb8486ac016/status)](https://www.codeship.io/projects/37713)
-
-Travis CI ![Passing](https://travis-ci.org/asinner/portfolio.svg?branch=master)
-
 Coveralls ![Coverage Status](https://coveralls.io/repos/asinner/portfolio/badge.png?branch=master)(https://coveralls.io/r/asinner/portfolio?branch=master)
 
 # README
