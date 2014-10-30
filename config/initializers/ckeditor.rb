@@ -1,2 +1,2 @@
-Ckeditor.setup do |config|
+Ckeditor.setup do |_config|
 end

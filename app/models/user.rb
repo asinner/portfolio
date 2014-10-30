@@ -5,18 +5,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   has_many :articles, foreign_key: 'author_id'
 
-  #def author?
+  # def author?
   #  role == 'author'
-  #end
+  # end
   #
-  #def editor?
+  # def editor?
   #  role == 'editor'
-  #end
-  
+  # end
+
   def admin?
     role == 'admin'
   end
-  
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
