@@ -1,0 +1,7 @@
+%ul.articles
+	%li.label Articles
+	- @articles.each do |article|
+		%li
+			= render 'admin/articles/overview', article: article
+
+		

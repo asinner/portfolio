@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   def create
-    @article = Article.find(params[:article_id])
+    @article = Article.find_by_slug(params[:article_id])
     @comment = @article.comments.new(comment_params)
     if @comment.save
       flash[:notice] = 'Comment was successfully created'

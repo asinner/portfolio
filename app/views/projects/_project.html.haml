@@ -1,0 +1,11 @@
+.project{id: dom_id(project)}
+	.image
+		= image_tag(project.image_url)
+	.title
+		= project.title
+	.category
+		%em= project.category
+	.url
+		= link_to project.url, project.url
+	.description
+		= project.description

@@ -4,9 +4,10 @@ ruby '2.1.2'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'coveralls', require: false
+gem 'ckeditor'
 gem 'devise'
 gem 'figaro'
-gem 'foundation-rails', '5.4.3'
+gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'minitest-rails'

@@ -1,0 +1,17 @@
+= form_for @article, url: @url do |f|
+	- if @article.errors.any?
+		#error-explanations
+			%h2= pluralize(@article.errors.count, 'error')
+	.actions
+		= f.submit 'Save article'
+		.field
+			= f.label :published
+			= f.check_box :published
+	.field
+		= f.label :title
+		= f.text_field :title
+	.field
+		= f.cktext_area :body
+	- unless @article.new_record?
+		= f.label :slug
+		= f.text_field :slug

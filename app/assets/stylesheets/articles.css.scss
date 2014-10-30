@@ -1,15 +1,75 @@
-.articles {
-}
 .article {
-	margin-bottom: 50px;
-}
-.article h1 {
-	font-size: 24px;
-}
-.article p {
-	font-size: 17px;
-}
-.article .author {
-	color: rgb(150, 150, 150);
-	font-size: 13px;
+	.title {
+		margin-bottom: 0.6em;
+		a {
+			color: $dark-blue;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+	.body {
+		font-size: rem(18);
+		color: darken($light-blue, 20);
+	}
+	.tip,
+	.note,
+	.warning {
+		font-size: rem(15);
+		@include pad(15px);
+		border-radius: 4px;
+		margin-bottom: 1em;
+		p {
+			margin: 0;
+		}
+	}
+	.warning {
+		background: $red;
+		color: #FFF;
+	}
+	.note {
+		background: lighten($dark-blue, 50);
+		a {
+			color: darken($green, 10);
+			font-weight: 500;
+		}
+	}
+	.tip {
+		color: darken($light-yellow, 70);
+		background: $light-yellow;
+		border: 1px solid darken($light-yellow, 15);
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.4em;
+	}
+	h3 {
+		font-size: rem(24);
+	}
+	ul,
+	ol {
+		margin-bottom: 1em;
+	}
+	ol {
+		list-style-type: decimal;
+		padding-left: 50px;
+	}
+	ul {
+		list-style-type: disc;
+		padding-left: 50px;
+	}
+	code {
+		background: $light-gray;
+		@include pad(3px);
+		margin: 0 5px;
+		border: 1px solid darken($light-gray, 10);
+		font-weight: bold;
+	}
+	pre {
+		margin-bottom: 2em;
+	}
 }

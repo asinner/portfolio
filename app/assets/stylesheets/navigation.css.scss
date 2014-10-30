@@ -1,0 +1,34 @@
+#navigations-container {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+ 	a {
+		display: inline-block;
+		line-height: 50px;
+		color: #FFF;
+		font-size: rem(15);
+		font-weight: 500;
+		@include pad(0 15px);
+	}
+	li {
+		float: left;
+	}
+	nav {
+		height: 50px;
+	}
+}
+
+#home-nav {
+	background: $green;
+	a:hover {
+		background: darken($green, 10);
+	}
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.20);
+}
+#admin-nav {
+	background: #444;
+	width: 100%;
+	a:hover {
+		background: darken(#444, 10);
+	}
+}

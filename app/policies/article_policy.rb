@@ -3,46 +3,46 @@ class ArticlePolicy < ApplicationPolicy
     attr_reader :user, :scope
 
     def initialize(user, scope)
-      @user = user
-      @scope = scope
+      #@user = user
+      #@scope = scope
     end
 
     def resolve
-      if @user && @user.editor?
-        scope.all
-      elsif @user && @user.author?
-        scope.where(author_id: @user.id)
-      else
-        scope.where(published: true)
-      end
+      #if @user && @user.editor?
+      #  scope.all
+      #elsif @user && @user.author?
+      #  scope.where(author_id: @user.id)
+      #else
+      #  scope.where(published: true)
+      #end
     end
   end
-
-  def new?
-    @user.editor? || @user.author? if @user
+  
+  def index?
+    @user.admin?
   end
-
-  def create?
-    @user.editor? || @user.author? if @user
-  end
-
+  
   def edit?
-    @user.editor? || @user.author? if @user
+    @user.admin?
   end
-
-  def publish?
-    @user.editor? if @user
+  
+  def create?
+    @user.admin?
   end
-
+  
+  def new?
+    @user.admin?
+  end
+  
+  def update?
+    @user.admin?
+  end
+  
   def destroy?
-    @user.editor? if @user
+    @user.admin?
   end
-
-  def permitted_attributes
-    if publish?
-      [:title, :body, :published]
-    else
-      [:title, :body]
-    end
+  
+  def show?
+    @record.published? || @user.admin?
   end
 end

@@ -1,0 +1,27 @@
+#new-project-page {
+	padding-top: 25px;
+	.title {
+		text-align: center;
+	}	
+}
+.project-form-page {
+	label {
+		font-size: rem(14);
+	}
+}
+.project {
+	@include pad(25px 0);
+	@include clearfix;
+	.image {
+		height: 150px;
+		background: #DDD;
+		width: 150px;
+		float: left;
+		margin-right: 10px;
+	}
+	.title {
+		font-size: rem(18);
+		font-weight: 600;
+	}
+	border-bottom: 1px dashed #CCC;
+}

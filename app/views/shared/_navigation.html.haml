@@ -1,0 +1,4 @@
+#navigations-container
+	- if current_user
+		= render 'shared/admin/navigation.html.haml'
+	= render 'shared/home/navigation.html.haml' unless namespace == 'Admin'

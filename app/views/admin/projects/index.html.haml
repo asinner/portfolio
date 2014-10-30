@@ -1,0 +1,5 @@
+%ul.projects
+	%li.label Projects
+	- @projects.each do |project|
+		%li{id: dom_id(project)}
+			= render 'admin/projects/overview', project: project
