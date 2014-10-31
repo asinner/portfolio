@@ -8,3 +8,9 @@
 		font-size: rem(18);
 	}
 }
+form {
+	.errors {
+		color: $red;
+		border-radius: 4px;
+	}
+}

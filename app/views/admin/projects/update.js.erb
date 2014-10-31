@@ -1,0 +1,4 @@
+<% @project.errors.full_messages.each do |msg| %>
+	var error = $("<div></div>").addClass('error')
+	$('form').find('.errors').append(error.text("<%= msg.html_safe %>"));
+<% end %>
