@@ -1,5 +1,5 @@
-= form_for @project, url: @url do |f|
-	%div
+= form_for @project, url: @url, remote: true do |f|
+	%div.errors
 		- @project.errors.full_messages.each do |msg|
 			= msg
 			

@@ -1,9 +1,9 @@
 require 'fileutils'
 
-desc "Create nondigest versions of all ckeditor digest assets"
-task "assets:precompile" => :environment do
+desc 'Create nondigest versions of all ckeditor digest assets'
+task 'assets:precompile' => :environment do
   fingerprint = /\-([0-9a-f]{32})\./
-  for file in Dir["public/assets/ckeditor/**/*"]
+  for file in Dir['public/assets/ckeditor/**/*']
     # Skip file unless it has a fingerprint
     next unless file =~ fingerprint
 
@@ -14,7 +14,7 @@ task "assets:precompile" => :environment do
     # Create a filename relative to public/assets
     # (example) public/assets/ckeditor/config.js => ckeditor/config.js
     filename = nondigest.sub 'public/assets/', ''
-    filename = filename.sub /.gz$/, ''          # Remove .gz for correct asset checking
+    filename = filename.sub(/.gz$/, '')          # Remove .gz for correct asset checking
 
     # Fetch the latest digest for this file from assets
     latest_digest = Rails.application.assets.find_asset(filename).digest
