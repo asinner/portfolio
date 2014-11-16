@@ -1,11 +1,9 @@
-.project{id: dom_id(project)}
-	.image
+.project
+	.about
+		%h4.title
+			= link_to project.title, project.url
+		%p.description
+			!= project.description
+	.preview
 		= image_tag(project.image_url)
-	.title
-		= project.title
-	.category
-		%em= project.category
-	.url
-		= link_to project.url, project.url
-	.description
-		= project.description
+%hr

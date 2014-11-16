@@ -1,34 +1,59 @@
-#navigations-container {
-	position: fixed;
-	width: 100%;
-	z-index: 9999;
- 	a {
-		display: inline-block;
-		line-height: 50px;
-		color: #FFF;
-		font-size: rem(15);
-		font-weight: 500;
-		@include pad(0 15px);
-	}
-	li {
-		float: left;
-	}
-	nav {
-		height: 50px;
-	}
-}
+$nav-height: 70px;
 
-#home-nav {
-	background: $green;
-	a:hover {
-		background: darken($green, 10);
-	}
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.20);
-}
-#admin-nav {
-	background: #444;
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	a:hover {
-		background: darken(#444, 10);
+	li {
+		display: inline-block;
+		a {
+			font-size: rem(14);
+			font-weight: 500;
+			color: rgb(150, 150, 150);
+			border-radius: 4px;
+			display: block;
+			@include pad(5px 10px);
+			margin-right: 5px;
+			position: relative;
+			top: 20px;
+			@include transition(all 0.10s ease-in-out);
+			&:hover {
+				color: #FFF;
+				background: $blue;
+			}
+		}
 	}
+}
+nav.admin {
+	background: #444;
+	height: 50px;
+	li {
+		position: relative;
+		top: 0;
+	}
+}
+nav.guest {
+	ul {
+		display: block;
+		float: left;
+		margin-left: 25px;
+	}
+	.title {
+		float: left;
+		font-size: rem(18);
+		line-height: $nav-height;
+		margin-left: 25px;
+		a {
+			color: rgb(80, 80, 80);
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+	background: rgba(255, 255, 255, 0.90);
+	height: $nav-height;
+}
+#navigation-fill {
+	height: $nav-height;
 }

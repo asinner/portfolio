@@ -1,0 +1,24 @@
+#footer {
+	background: rgb(230, 230, 230);
+	width: 100%;
+	@include pad(50px);
+	li.label {
+		font-weight: 500;
+	}
+	li {
+		font-size: rem(15);
+		margin-bottom: 3px;
+	}
+	a {
+		display: block;
+		color: #444;
+		@include transition(all 0.1s ease-in-out);
+		position: relative;
+		left: 0;
+		&:hover {
+			text-decoration: underline;
+			padding-left: 5px;
+			border-left: 2px solid $red;
+		}
+	}
+}

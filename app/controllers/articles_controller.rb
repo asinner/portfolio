@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.published
+    @articles = Article.published.last(5)
   end
 
   def show
