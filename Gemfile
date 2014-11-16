@@ -7,6 +7,7 @@ gem 'coveralls', require: false
 gem 'devise'
 gem 'ffi', '<1.9.3'
 gem 'figaro'
+gem 'faker'
 gem 'haml'
 gem 'high_voltage'
 gem 'jbuilder', '~> 2.0'
