@@ -1,34 +1,90 @@
-#navigations-container {
+$nav-height: 70px;
+
+.top-bar {
 	position: fixed;
-	width: 100%;
 	z-index: 9999;
- 	a {
-		display: inline-block;
-		line-height: 50px;
-		color: #FFF;
-		font-size: rem(15);
-		font-weight: 500;
-		@include pad(0 15px);
+	top: 0;
+	left: 0;
+	width: 100%;
+	nav {
+		height: $nav-height;
+	}
+}
+nav.admin {
+	background: #444;
+	li {
+		a {
+			font-size: rem(15);
+			font-weight: 500;
+			color: rgb(200, 200, 200);
+			&:hover {
+				color: #FFF;
+			}
+		}
+	}
+	.top-menu > li {
+		float: left;
+		> a {
+			line-height: 70px;
+			padding: 0 15px;
+		}
+		&:hover .sub-menu {
+			z-index: 999;
+			display: block;
+		}
+		position: relative;
+	}
+	.sub-menu {
+		display: none;
+		position: absolute;
+		width: 150px;
+		background: #333;
+		padding: 15px;
+		a {
+			display: block;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+}
+nav.guest {
+	background: rgba(255, 255, 255, 0.90);
+	.title {
+		float: left;
+		margin: 0 15px;
+		a {
+			display: block;
+			line-height: 70px;
+			height: 70px;
+			font-size: rem(20);
+			color: rgb(80, 80, 80);
+			&:hover {
+				color: $blue;
+			}
+		}
 	}
 	li {
 		float: left;
-	}
-	nav {
-		height: 50px;
+		margin: 0 10px;
+		position: relative;
+		top: 20px;
+		a {
+			font-size: rem(14);
+			font-weight: 500;
+			color: rgb(130, 130, 130);
+			display: block;
+			line-height: 30px;
+			height: 30px;
+			padding: 0 10px;
+			border-radius: 4px;
+			@include transition(all 0.10s ease-in-out);
+			&:hover {
+				background: $blue;
+				color: #fff;
+			}
+		}
 	}
 }
-
-#home-nav {
-	background: $green;
-	a:hover {
-		background: darken($green, 10);
-	}
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.20);
-}
-#admin-nav {
-	background: #444;
-	width: 100%;
-	a:hover {
-		background: darken(#444, 10);
-	}
+.navigation-fill {
+	height: $nav-height;
 }

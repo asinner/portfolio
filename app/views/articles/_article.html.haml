@@ -2,10 +2,3 @@
 	%h1.title= link_to article.title, article_path(article)
 	.body
 		!= article.body
-
-- unless action_name == 'index'
-	.comments
-		%h4 Leave a comment
-		= render 'comments/form'
-		%h4 Comments
-		= render article.comments

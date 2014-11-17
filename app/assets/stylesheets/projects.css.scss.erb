@@ -1,0 +1,69 @@
+#projects {
+	max-width: 90%;
+	margin: 0 auto 0;
+}
+.project {
+	.title {
+		font-size: rem(30);
+		font-weight: 400;
+		margin-bottom: 0.2em;
+		a {
+			color: $blue;
+		}
+	}
+	.about {
+		font-size: rem(16);
+		line-height: 2em;
+		color: rgb(130, 130, 130);
+	}
+	@include clearfix;
+	@include media($medium-screen) {
+		.about,
+		.preview {
+			display: inline-block;
+		}
+		.about {
+			width: 50%;
+		}
+		.preview {
+			width: 50%;
+			max-width: 450px;
+		}
+	}
+	padding: 0;
+	.preview {
+		float: right;
+		img {
+			vertical-align: bottom;
+			border: 1px solid rgb(230, 230, 230);
+			padding: 10px;
+			background: #EEE;
+		}
+	}
+}
+.desktop {
+	@include pad(0 15px);
+	background: rgb(230, 230, 230);
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	.tools {
+		@include clearfix;
+		@include pad(10px 0);
+		div {
+			float: left;
+			height: 8px;
+			width: 8px;
+			border-radius: 4px;
+			margin-right: 3px;
+		}
+		.close {
+			background: $red;
+		}
+		.min {
+			background: #EDAF42;
+		}
+		.max {
+			background: #58BF5A;
+		}
+	}
+}

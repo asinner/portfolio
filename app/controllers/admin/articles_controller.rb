@@ -4,7 +4,7 @@ class Admin::ArticlesController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(updated_at: :desc)
   end
 
   def edit

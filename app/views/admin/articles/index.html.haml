@@ -1,7 +1,6 @@
 %ul.articles
-	%li.label Articles
 	- @articles.each do |article|
-		%li
+		%li.article
 			= render 'admin/articles/overview', article: article
 
 		

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'welcome#index'
   resources :articles do
     resources :comments
   end
@@ -12,6 +11,8 @@ Rails.application.routes.draw do
   end
 
   resources :projects
+  
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

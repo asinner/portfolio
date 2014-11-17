@@ -1,4 +1,6 @@
-#navigations-container
-	- if current_user
-		= render 'shared/admin/navigation.html.haml'
-	= render 'shared/home/navigation.html.haml' unless namespace == 'Admin'
+%header.top-bar
+	= render 'shared/admin/navigation.html.haml' if current_user
+	= render 'shared/home/navigation.html.haml' unless namespace_from_path == 'admin'
+.navigation-fill
+- if current_user 
+	.navigation-fill 

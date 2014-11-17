@@ -12,6 +12,7 @@
 		= f.text_field :title
 	.field
 		= f.cktext_area :body
+		-# = f.text_area :body
 	- unless @article.new_record?
 		= f.label :slug
 		= f.text_field :slug

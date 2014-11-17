@@ -6,7 +6,8 @@ class Article < ActiveRecord::Base
   # Validations
   validates :title, presence: true
   validates :body, presence: true
-
+  
+  scope :most_recent_titles, ->(limit) { select(:id, :title, :slug).published.last(limit) }
   scope :published, -> { where published: true }
   scope :drafts,   -> { where published: false }
 

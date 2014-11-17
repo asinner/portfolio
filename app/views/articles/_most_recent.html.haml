@@ -1,0 +1,7 @@
+#most-recent
+	%ul
+		%li.label
+			%strong Most recent articles
+		- @most_recent.each do |article|
+			%li
+				= link_to article.title, article_path(article.slug)

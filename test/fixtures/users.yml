@@ -18,6 +18,7 @@ editor:
 andrew:
     email: andrew@example.com
     encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
+    
 mark:
     email: mark@example.com
     encrypted_password: <%= User.new.send(:password_digest, '12345678') %>

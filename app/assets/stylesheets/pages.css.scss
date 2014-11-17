@@ -1,0 +1,20 @@
+#contact {
+	color: rgb(80, 80, 80);
+	max-width: 600px;
+	@include pad(25px);
+	margin: 0 auto 0;
+	padding-top: 50px;
+	padding-bottom: 175px;
+	h1 {
+		font-size: rem(30);
+		margin-bottom: 0.4em;
+	}
+	ul {
+		color: rgb(130, 130, 130);
+		list-style: disc;
+		padding-left: 30px;
+	}
+	li {
+		color: rgb(80, 80, 80);
+	}
+}

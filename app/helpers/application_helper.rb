@@ -1,5 +1,8 @@
 module ApplicationHelper
   def namespace
-    controller.class.name.split('::').first
+  end
+  
+  def namespace_from_path
+    return request.path.split('/')[1]
   end
 end

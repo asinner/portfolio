@@ -4,10 +4,3 @@ body {
 	margin: 0;
 	height: 100%;
 }
-#page {
-	@include pad(50px 25px 100px);
-	@include media($medium-screen) {
-		max-width: 950px;
-		margin: 0 auto 0;
-	}
-}

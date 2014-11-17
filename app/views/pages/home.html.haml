@@ -1,0 +1,21 @@
+#home
+	#introduction
+		= image_tag('headshot.jpg', class: 'headshot')
+		%h1.name
+			Andrew Sinner
+		%h2.title
+			Full Stack Developer
+		%p
+			I'm a 
+			%strong full stack developer 
+			based in Seattle, WA. I spend my time 
+			= link_to 'building', '/#work'
+			web applications. I 
+			= link_to 'write', articles_path
+			on software and business.
+	#work
+		%hr
+		%h3
+			My work
+		#projects
+			= render @projects
