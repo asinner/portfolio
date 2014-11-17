@@ -58,7 +58,7 @@ CKEDITOR.editorConfig = function( config ) {
       modes :  [ ['HTML', 'html'], ['CSS', 'css'], ['PHP', 'php'], ['JS', 'javascript'], ['Ruby', 'ruby'], ['SCSS', 'scss'], ['YAML', 'yaml'], ['JSON', 'json'], ['Shell', 'sh'] ],
   
       // The theme of the ACE Editor of the plugin.
-      theme : 'ambiance',
+      theme : 'text',
   
       // Tab indentation (in spaces)
       tab_size : '2',
