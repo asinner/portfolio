@@ -1,8 +1,14 @@
 %nav.admin
-	%ul
+	%ul.top-menu
 		%li= link_to 'Site', root_path
-		%li= link_to 'Dashboard', admin_articles_path
-		%li= link_to 'New +', new_admin_article_path
-		%li= link_to 'Projects', admin_projects_path
-		%li= link_to 'Project +', new_admin_project_path
+		%li
+			%a Articles
+			%ul.sub-menu
+				%li= link_to 'New article +', new_admin_article_path
+				%li= link_to 'All articles', admin_articles_path
+		%li
+			%a Projects
+			%ul.sub-menu
+				%li= link_to 'New project +', new_admin_project_path
+				%li= link_to 'All projects', admin_projects_path 
 		%li= link_to 'Sign out', destroy_user_session_path, method: :delete

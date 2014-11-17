@@ -1,4 +1,6 @@
 %header.top-bar
 	= render 'shared/admin/navigation.html.haml' if current_user
-	= render 'shared/home/navigation.html.haml'
-#navigation-fill
+	= render 'shared/home/navigation.html.haml' unless namespace_from_path == 'admin'
+.navigation-fill
+- if current_user 
+	.navigation-fill 

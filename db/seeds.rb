@@ -12,3 +12,17 @@ User.create(
   password: ENV['admin_pass'],
   role: 'admin'
 )
+
+
+25.times do
+  ps = Faker::Lorem.paragraphs(10)
+  ps.map! do |p|
+    p = "<p>#{p}</p>"
+  end
+  ps = ps.join('')
+  Article.create(
+    title: Faker::Lorem.sentence,
+    published: true,
+    body: ps
+  )
+end

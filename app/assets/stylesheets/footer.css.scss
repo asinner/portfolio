@@ -1,24 +1,28 @@
 #footer {
-	background: rgb(230, 230, 230);
+	background: rgb(250, 250, 250);
+	border-top: 1px solid rgb(230, 230, 230);
 	width: 100%;
-	@include pad(50px);
-	li.label {
-		font-weight: 500;
+	@include pad(25px 0);
+	font-size: rem(16);
+	color: rgb(80, 80, 80);
+	h4 {
+		font-size: rem(18);
+		margin-bottom: 0.4em;
 	}
-	li {
+	.about {
+		@include pad(25px);
+		max-width: 600px;
+		margin: 0 auto 0;
 		font-size: rem(15);
-		margin-bottom: 3px;
+		line-height: 2.0em;
 	}
 	a {
-		display: block;
-		color: #444;
 		@include transition(all 0.1s ease-in-out);
-		position: relative;
-		left: 0;
 		&:hover {
 			text-decoration: underline;
 			padding-left: 5px;
-			border-left: 2px solid $red;
+			border-left: 2px solid $blue;
+			color: $blue;
 		}
 	}
 }
