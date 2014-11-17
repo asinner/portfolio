@@ -20,6 +20,7 @@ pre.prettyprint {
   border: none;
   padding: 5px;
 	border-radius: 2px;
+	overflow: scroll;
 }
 
 .pln {
@@ -145,7 +146,7 @@ li.L6,
 li.L7,
 li.L8,
 li.L9 {
-	background: #000;
+	background: #1d1f21;
 }
 
 /* Alternate shading for lines */
